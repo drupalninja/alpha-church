@@ -2,7 +2,7 @@
   {{ $pages := .Paginator.Pages }}
   {{ $len := (len $pages) }}
   {{ range $index, $key := $pages }}
-    {{ if .Params.images }}
+    {{ if .Params.image }}
       <div class="row no-collapse 50% uniform">
         <div class="col-6 col-12-mobilep">
           <a href="{{ .Permalink }}">{{ if .Draft }}DRAFT: {{end}}{{ .Title | markdownify }}</a>
@@ -16,7 +16,7 @@
           {{ end }} {{/* if */}}
         </div>
         <div class="col-6 col-12-mobilep">
-          <span class="image fit"><img src="{{ index .Params.images 0 | relURL }}"></span>
+          <span class="image fit"><img src="{{ .Params.image | relURL }}"></span>
         </div>
     </div>
     {{ else }}

@@ -13,7 +13,7 @@ categories = [
     "Development",
     "golang",
 ]
-images = []
+image = ""
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for
